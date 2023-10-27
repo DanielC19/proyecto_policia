@@ -1,9 +1,12 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        
         <div class="form-group">
-            {{ Form::label('officer_id') }}
-            {{ Form::text('officer_id', $equipment->officer_id, ['class' => 'form-control' . ($errors->has('officer_id') ? ' is-invalid' : ''), 'placeholder' => 'Officer Id']) }}
+            <label for="officer_id">Uniformado</label>
+            <select name="officer_id" class="form-select {{ $errors->has('name') ? ' is-invalid' : '' }}">
+                @foreach ($officers as $officer)
+                    <option value="{{ $officer->id }}">{{ $officer->name }}</option>
+                @endforeach
+            </select>
             {!! $errors->first('officer_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

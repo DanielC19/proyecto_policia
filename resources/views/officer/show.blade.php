@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('template_title')
-    {{ $officer->name ?? "{{ __('Show') Officer" }}
-@endsection
-
 @section('content')
     <section class="content container-fluid">
         <div class="row">
@@ -44,7 +40,14 @@
                             <strong>Rank:</strong>
                             {{ $officer->rank }}
                         </div>
-
+                        <div class="form-group">
+                            <strong>Equipment:</strong>
+                            <ul>
+                                @foreach ($officer->equipment as $equipment)
+                                    <li>{{ $equipment->name }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

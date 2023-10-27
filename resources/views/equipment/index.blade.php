@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Officer Id</th>
+										<th>Nombre Uniformado</th>
 										<th>Name</th>
 										<th>Type</th>
 										<th>Provider</th>
@@ -45,11 +45,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($equipment as $equipment)
+                                    @foreach ($equipment_all as $equipment)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $equipment->officer_id }}</td>
+											<td>{{ $equipment->officer->name }}</td>
 											<td>{{ $equipment->name }}</td>
 											<td>{{ $equipment->type }}</td>
 											<td>{{ $equipment->provider }}</td>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $equipment->links() !!}
+                {!! $equipment_all->links() !!}
             </div>
         </div>
     </div>

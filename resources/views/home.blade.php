@@ -16,8 +16,8 @@
 
                     <p>Bienvenid@ {{ explode(' ', Auth::user()->name)[0] }}, aquí tienes un
                         administrador de uniformados y equipamiento para cada uno:</p>
-                    <a href="" class="btn">Uniformados</a>
-                    <a href="" class="btn">Equipamiento</a>
+                    <a href="{{ route('officers.index') }}" class="btn">Uniformados</a>
+                    <a href="{{ route('equipment.index')  }}" class="btn">Equipamiento</a>
                 </div>
             </div>
         </div>

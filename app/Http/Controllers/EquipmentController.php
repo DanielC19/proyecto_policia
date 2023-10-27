@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Equipment;
+use App\Models\Officer;
 use Illuminate\Http\Request;
 
 /**
@@ -18,10 +19,10 @@ class EquipmentController extends Controller
      */
     public function index()
     {
-        $equipment = Equipment::paginate();
+        $equipment_all = Equipment::paginate();
 
-        return view('equipment.index', compact('equipment'))
-            ->with('i', (request()->input('page', 1) - 1) * $equipment->perPage());
+        return view('equipment.index', compact('equipment_all'))
+            ->with('i', (request()->input('page', 1) - 1) * $equipment_all->perPage());
     }
 
     /**
@@ -32,7 +33,9 @@ class EquipmentController extends Controller
     public function create()
     {
         $equipment = new Equipment();
-        return view('equipment.create', compact('equipment'));
+        $officers = Officer::all();
+
+        return view('equipment.create', compact('equipment', 'officers'));
     }
 
     /**
@@ -73,8 +76,9 @@ class EquipmentController extends Controller
     public function edit($id)
     {
         $equipment = Equipment::find($id);
+        $officers = Officer::all();
 
-        return view('equipment.edit', compact('equipment'));
+        return view('equipment.edit', compact('equipment', 'officers'));
     }
 
     /**

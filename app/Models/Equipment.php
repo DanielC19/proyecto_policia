@@ -20,7 +20,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Equipment extends Model
 {
-    
     static $rules = [
 		'officer_id' => 'required',
 		'name' => 'required',
@@ -37,6 +36,8 @@ class Equipment extends Model
      */
     protected $fillable = ['officer_id','name','type','provider'];
 
-
+    public function officer() {
+      return $this->belongsTo(Officer::class);
+    }
 
 }

@@ -42,6 +42,8 @@ class Officer extends Model
      */
     protected $fillable = ['id', 'name','police_id','birth','address','rh','rank'];
 
-
+    public function equipment() {
+      return $this->hasMany(Equipment::class);
+    }
 
 }
