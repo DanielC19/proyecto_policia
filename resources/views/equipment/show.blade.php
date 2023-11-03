@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('template_title')
-    {{ $equipment->name ?? "{{ __('Show') Equipment" }}
-@endsection
-
 @section('content')
     <section class="content container-fluid">
         <div class="row">
@@ -21,8 +17,8 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Officer Id:</strong>
-                            {{ $equipment->officer_id }}
+                            <strong>Officer Name:</strong>
+                            <a href="{{ route('officers.show', $equipment->officer->id) }}">{{ $equipment->officer->name }}</a>
                         </div>
                         <div class="form-group">
                             <strong>Name:</strong>

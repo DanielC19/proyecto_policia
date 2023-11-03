@@ -44,7 +44,7 @@
                             <strong>Equipment:</strong>
                             <ul>
                                 @foreach ($officer->equipment as $equipment)
-                                    <li>{{ $equipment->name }}</li>
+                                    <li><a href="{{ route('equipment.show', $equipment->id) }}">{{ $equipment->name }}</a></li>
                                 @endforeach
                             </ul>
                         </div>
