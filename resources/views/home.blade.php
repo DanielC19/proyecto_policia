@@ -4,20 +4,25 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Inicio') }}</div>
+            <div  class="card">
+                <h3 class="card-header">{{ __('Inicio') }}</h3>
 
-                <div class="card-body">
+                <div class="card-body center">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    <p>Bienvenid@ {{ explode(' ', Auth::user()->name)[0] }}, aquí tienes un
-                        administrador de uniformados y equipamiento para cada uno:</p>
-                    <a href="{{ route('officers.index') }}" class="btn">Uniformados</a>
-                    <a href="{{ route('equipment.index')  }}" class="btn">Equipamiento</a>
+                    <h6>Bienvenid@ {{ explode(' ', Auth::user()->name)[0] }}, aquí tienes un
+                        administrador de uniformados y equipamiento para cada uno:</h6>
+                    <div class="my-3">
+                        <a href="{{ route('officers.index') }}" class="btn btn-uni"  >Uniformados</a>
+                        <a href="{{ route('equipment.index')  }}" class="btn btn-uni1">Equipamiento</a>
+                    </div>
+
+                   
+                    <img width="500px" src="{{ asset('storage/img/descarga.gif') }}">
                 </div>
             </div>
         </div>

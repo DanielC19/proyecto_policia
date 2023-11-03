@@ -1,0 +1,21 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1)!important;
+};
+
+.btn-uni1{
+    background-color: #205736;
+    color:#fff;
+}
+.btn-uni{
+    background-color: #205736;
+    color:#fff;
+}
+
+/*clase con ., id con #*/
