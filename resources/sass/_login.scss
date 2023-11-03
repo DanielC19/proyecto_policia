@@ -204,13 +204,17 @@ p{
 .pass-text{
   display:inline-block;
 }
-.show{
+.show-password {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
   float:right;
-  margin-top:11px;
-  transform:translateY(-2px);
+  margin-top: 11px;
+  margin-right: 16px;
+  transform:translateY(4px);
 }
-.show span{
-  font-size:12px;
+.show-password p {
+  margin: 4px 6px 0 0;
 }
 
 .button{
@@ -349,7 +353,7 @@ p{
   align-items:center;
 }
 
-input, .show{
+input {
   border-radius: 20px;
   height: 25px;
   padding:2px;
@@ -368,10 +372,7 @@ input, .show{
   box-shadow: 0 4px 4px -0px rgba(0,0,0,.3);
   
 }
-.show p{
-    width:60px;
-    margin-top: 10px;
-}
+
 input:hover{
   box-shadow: 0 4px 4px -0px rgba(0,0,0,.3);
 }

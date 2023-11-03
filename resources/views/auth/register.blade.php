@@ -48,8 +48,8 @@
                         </span>
                     @enderror
                     <p class='pass-text'>  C O N T R A S E Ñ A</p>
-                    <div class="show">
-                        <input id="show_password" class="show" type="checkbox">
+                    <div class="show-password">
+                        <input id="show_password" type="checkbox">
                         <p>V E R</p>
                     </div>
                     <input type="password" name="password" class="pass input @error('password') is-invalid @enderror" id="pass" required>
