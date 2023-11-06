@@ -11,29 +11,29 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Equipment</span>
+                            <span class="card-title">{{ __('Mostrar') }} Equipamiento</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('equipment.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('equipment.index') }}"> {{ __('Volver') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Officer Id:</strong>
+                            <strong>Id Oficial:</strong>
                             {{ $equipment->officer_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Name:</strong>
+                            <strong>Nombre:</strong>
                             {{ $equipment->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Type:</strong>
+                            <strong>Tipo:</strong>
                             {{ $equipment->type }}
                         </div>
                         <div class="form-group">
-                            <strong>Provider:</strong>
+                            <strong>Proveedor:</strong>
                             {{ $equipment->provider }}
                         </div>
 

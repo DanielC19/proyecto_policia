@@ -35,5 +35,9 @@
     "The provided password does not match your current password.": "La contraseña no coincide con tu contraseña actual.",
     "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.": "¿Haz olvidado tu contraseña? No hay problema. Escribe tu email y te mandaremos un correo para reestablecer tu contraseña.",
     "Email Password Reset Link": "Enviar correo de recuperación",
-    "Last Name": "Apellido"
+    "Last Name": "Apellido",
+    "Officer Id": "Id Oficial",
+    "Equipment":"Equipamiento",
+    "Show Equipment": "Motrar Equipamiento",
+    "Equipment updated successfully":"Equipamiento editado con éxito"
 }
