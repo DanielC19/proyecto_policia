@@ -51,7 +51,7 @@ class EquipmentController extends Controller
         $equipment = Equipment::create($request->all());
 
         return redirect()->route('equipment.index')
-            ->with('success', 'Equipment created successfully.');
+            ->with('success', 'Equipamiento creado exitosamente.');
     }
 
     /**
@@ -95,7 +95,7 @@ class EquipmentController extends Controller
         $equipment->update($request->all());
 
         return redirect()->route('equipment.index')
-            ->with('success', 'Equipment updated successfully');
+            ->with('success', 'Equipamiento editado exitosamente');
     }
 
     /**
@@ -108,6 +108,6 @@ class EquipmentController extends Controller
         $equipment = Equipment::find($id)->delete();
 
         return redirect()->route('equipment.index')
-            ->with('success', 'Equipment deleted successfully');
+            ->with('success', 'Equipamiento eliminado exitosamente');
     }
 }
