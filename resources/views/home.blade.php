@@ -17,8 +17,8 @@
                     <h6>Bienvenid@ {{ explode(' ', Auth::user()->name)[0] }}, aquí tienes un
                         administrador de uniformados y equipamiento para cada uno:</h6>
                     <div class="my-3">
-                        <a href="{{ route('officers.index') }}" class="btn btn-uni"  >Uniformados</a>
-                        <a href="{{ route('equipment.index')  }}" class="btn btn-uni1">Equipamiento</a>
+                        <a href="{{ route('officers.index') }}" class="btn btn-uni mx-3"  >Uniformados</a>
+                        <a href="{{ route('equipment.index')  }}" class="btn btn-uni1 mx-3">Equipamiento</a>
                     </div>
 
                    

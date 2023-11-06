@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('template_title')
-    {{ $equipment->name ?? "{{ __('Show') Equipment" }}
-@endsection
-
 @section('content')
     <section class="content container-fluid">
         <div class="row">
