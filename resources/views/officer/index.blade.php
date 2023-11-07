@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Officer') }}
+                                {{ __('Oficial') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('officers.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -36,12 +36,12 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Name</th>
-										<th>Police Id</th>
-										<th>Birth</th>
-										<th>Address</th>
-										<th>Rh</th>
-										<th>Rank</th>
+										<th>Nombre</th>
+										<th>ID Polícia</th>
+										<th>Fecha cumpleaños</th>
+										<th>Dirección</th>
+										<th>Tipo de sangre</th>
+										<th>Rango</th>
 
                                         <th></th>
                                     </tr>

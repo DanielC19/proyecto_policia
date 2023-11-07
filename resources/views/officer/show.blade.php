@@ -7,41 +7,41 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Officer</span>
+                            <span class="card-title">{{ __('Mostrar') }} Officer</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('officers.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('officers.index') }}"> {{ __('Retroceder') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Name:</strong>
+                            <strong>Nombre:</strong>
                             {{ $officer->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Police Id:</strong>
+                            <strong>ID Polícia:</strong>
                             {{ $officer->police_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Birth:</strong>
+                            <strong>Fecha cumpleaños:</strong>
                             {{ $officer->birth }}
                         </div>
                         <div class="form-group">
-                            <strong>Address:</strong>
+                            <strong>Dirección:</strong>
                             {{ $officer->address }}
                         </div>
                         <div class="form-group">
-                            <strong>Rh:</strong>
+                            <strong>Tipo de sangre:</strong>
                             {{ $officer->rh }}
                         </div>
                         <div class="form-group">
-                            <strong>Rank:</strong>
+                            <strong>Rango:</strong>
                             {{ $officer->rank }}
                         </div>
                         <div class="form-group">
-                            <strong>Equipment:</strong>
+                            <strong>Equipamiento:</strong>
                             <ul>
                                 @foreach ($officer->equipment as $equipment)
                                     <li><a href="{{ route('equipment.show', $equipment->id) }}">{{ $equipment->name }}</a></li>

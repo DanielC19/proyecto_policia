@@ -48,7 +48,7 @@ class OfficerController extends Controller
         $officer = Officer::create($request->all());
 
         return redirect()->route('officers.index')
-            ->with('success', 'Officer created successfully.');
+            ->with('success', 'Oficial creado efectivamente.');
     }
 
     /**
@@ -91,7 +91,7 @@ class OfficerController extends Controller
         $officer->update($request->all());
 
         return redirect()->route('officers.index')
-            ->with('success', 'Officer updated successfully');
+            ->with('success', 'Oficial creado efectivamente.');
     }
 
     /**
@@ -104,6 +104,6 @@ class OfficerController extends Controller
         $officer = Officer::find($id)->delete();
 
         return redirect()->route('officers.index')
-            ->with('success', 'Officer deleted successfully');
+            ->with('success', 'Oficial elimiando exitosamente');
     }
 }
