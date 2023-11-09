@@ -25,7 +25,7 @@ return new class extends Migration
         DB::unprepared("
         CREATE TRIGGER `$db_name`.`equipment_BEFORE_DELETE` BEFORE DELETE ON `equipment` FOR EACH ROW
         BEGIN
-            INSERT INTO equipment_log(officer_id,name,type,provider,created_at,update_at)
+            INSERT INTO equipment_log(officer_id,name,type,provider,created_at,updated_at)
             VALUES (OLD.officer_id, OLD.name, OLD.type, OLD.provider,CURDATE(),CURDATE());
         END;
         ");
