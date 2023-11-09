@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('template_title')
-    Officer
-@endsection
-
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -13,24 +9,16 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Oficiales') }}
+                                {{ __('Oficiales eliminados') }}
                             </span>
 
                             <div class="float-right">
-                                <a href="{{ route('officers.deleted') }}" class="btn btn-danger btn-sm float-right"  data-placement="left">
-                                    {{ __('Ver eliminados') }}
-                                </a>
-                                <a href="{{ route('officers.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                    {{ __('Crear nuevo') }}
+                                <a href="{{ route('officers.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('Ver oficiales') }}
                                 </a>
                             </div>
                         </div>
                     </div>
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -44,8 +32,6 @@
 										<th>Dirección</th>
 										<th>Tipo de sangre</th>
 										<th>Rango</th>
-
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -58,16 +44,6 @@
 											<td>{{ $officer->address }}</td>
 											<td>{{ $officer->rh }}</td>
 											<td>{{ $officer->rank }}</td>
-
-                                            <td>
-                                                <form action="{{ route('officers.destroy',$officer->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('officers.show',$officer->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('officers.edit',$officer->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
-                                                </form>
-                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

@@ -19,7 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('officers', OfficerController::class);
+    Route::get('deleted/officers', [OfficerController::class, 'deleted'])->name('officers.deleted');
     Route::resource('equipment', EquipmentController::class);
+    Route::get('deleted/equipment', [EquipmentController::class, 'deleted'])->name('equipment.deleted');
 });
 
 Auth::routes();

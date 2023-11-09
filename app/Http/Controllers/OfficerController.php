@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Officer;
+use App\Models\OfficersLog;
 use Illuminate\Http\Request;
 
 /**
@@ -101,9 +102,20 @@ class OfficerController extends Controller
      */
     public function destroy($id)
     {
-        $officer = Officer::find($id)->delete();
+        $officer = Officer::find($id);
+
+        foreach ($officer->equipment as $equipment) {
+            $equipment->delete();
+        }
+        $officer->delete();
 
         return redirect()->route('officers.index')
             ->with('success', 'Oficial elimiando exitosamente');
+    }
+
+    public function deleted() {
+        $officers = OfficersLog::paginate();
+
+        return view('officer.deleted', compact('officers'));
     }
 }

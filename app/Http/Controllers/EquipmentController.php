@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Equipment;
+use App\Models\EquipmentLog;
 use App\Models\Officer;
 use Illuminate\Http\Request;
 
@@ -109,5 +110,11 @@ class EquipmentController extends Controller
 
         return redirect()->route('equipment.index')
             ->with('success', 'Equipamiento eliminado exitosamente');
+    }
+
+    public function deleted() {
+        $equipment_all = EquipmentLog::paginate();
+
+        return view('equipment.deleted', compact('equipment_all'));
     }
 }
