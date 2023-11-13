@@ -37,7 +37,7 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>Cédula</th>
 										<th>Nombre</th>
 										<th>ID Polícia</th>
 										<th>Fecha nacimiento</th>

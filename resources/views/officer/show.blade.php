@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Mostrar') }} Officer</span>
+                            <span class="card-title">{{ __('Mostrar') }} Oficial</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('officers.index') }}"> {{ __('Retroceder') }}</a>

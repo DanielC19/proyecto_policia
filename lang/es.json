@@ -39,5 +39,6 @@
     "Officer Id": "Id Oficial",
     "Equipment":"Equipamiento",
     "Show Equipment": "Motrar Equipamiento",
-    "Equipment updated successfully":"Equipamiento editado con éxito"
+    "Equipment updated successfully":"Equipamiento editado con éxito",
+    "Submit": "Enviar"
 }
