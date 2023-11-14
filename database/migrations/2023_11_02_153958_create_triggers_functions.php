@@ -37,8 +37,8 @@ return new class extends Migration
         BEGIN
             declare result VARCHAR(55);
             declare result1 INT;
-            select o.name, count(*)
-            into result, result1
+            select o.name
+            into result
             from officers as o, equipment as e
             where o.id = e.officer_id
             group by e.officer_id
