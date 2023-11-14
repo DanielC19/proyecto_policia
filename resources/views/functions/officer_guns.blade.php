@@ -9,14 +9,9 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                Equipamiento eliminado
+                                {{ __('Equipment') }} para {{ $officer->name }}
                             </span>
 
-                            <div class="float-right">
-                                <a href="{{ route('equipment.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                    {{ __('Ver equipamiento') }}
-                                </a>
-                            </div>
                         </div>
                     </div>
 
@@ -25,18 +20,14 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-										<th>Cédula Uniformado</th>
 										<th>Nombre Equipamiento</th>
 										<th>Tipo</th>
 										<th>Proveedor</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($equipment_all as $equipment)
+                                    @foreach ($result as $equipment)
                                         <tr>
-                                            <td>{{ $equipment->id }}</td>
-											<td>{{ $equipment->officer_id }}</td>
 											<td>{{ $equipment->name }}</td>
 											<td>{{ $equipment->type }}</td>
 											<td>{{ $equipment->provider }}</td>
@@ -47,7 +38,6 @@
                         </div>
                     </div>
                 </div>
-                {!! $equipment_all->links() !!}
             </div>
         </div>
     </div>
